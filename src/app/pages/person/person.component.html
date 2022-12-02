@@ -1,0 +1,15 @@
+<div class="person-container">
+  <div>
+    <p>Número de personas {{ peopleNumber$ | async }}</p>
+  </div>
+  <button mat-raised-button color="warn" (click)="addPerson()">Añadir</button>
+  <button mat-raised-button color="primary" (click)="removePerson()">
+    Quitar
+  </button>
+</div>
+<div class="person-container">
+  <button mat-raised-button color="destructive" (click)="massiveIncrement()">
+    +100
+  </button>
+  <button mat-raised-button color="destructive" (click)="reset()">RESET</button>
+</div>

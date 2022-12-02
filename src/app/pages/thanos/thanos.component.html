@@ -1,0 +1,14 @@
+<div
+  class="thanos-container"
+  *ngIf="peopleNumber$ | async as total; else noPeople; available"
+>
+  <p>Number of people {{ total }}</p>
+
+  <button mat-raised-button color="danger" [disabled]="total < 2" (click)="chas()">Chas</button>
+</div>
+
+<ng-template #noPeople>
+  <div class="thanos-container">
+    <p>No hay gente en el mundo.</p>
+  </div>
+</ng-template>
